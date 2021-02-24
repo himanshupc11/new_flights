@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Flight</h1>
+    <p>Origin: {{flight.origin}}</p>
+    <p>Destination: {{flight.destination}}</p>
+    <p>Duration: {{flight.duration}}</p>
+
+    <h1>Passengers</h1>
+    {% for passenger in passengers %}
+        <p>{{passenger.fname}} {{passenger.lname}}</p>
+    {% endfor %}
+
+
+    <a href="{% url 'index' %}">All Flights</a>
+</body>
+</html>
