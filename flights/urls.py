@@ -17,6 +17,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('', views.index.as_view(), name="index"),
     path('<int:flight_id>/', views.flight_, name="flight_id")
 ]
